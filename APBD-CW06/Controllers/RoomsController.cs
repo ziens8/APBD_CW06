@@ -32,7 +32,7 @@ public class RoomsController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetAll(int id,int minCapacity,bool? hasProjector, bool? activeOnly)
+    public IActionResult GetAll([FromQuery]int minCapacity, [FromQuery]bool? hasProjector, [FromQuery]bool? activeOnly)
     {
         var rooms = DataBase.Rooms
             .Where(x => x.Capacity >= minCapacity && x.HasProjector == hasProjector && x.IsActive == activeOnly);
