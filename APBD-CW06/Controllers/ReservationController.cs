@@ -1,6 +1,10 @@
-﻿namespace APBD_CW06.Controllers;
+﻿using APBD_CW06.Models;
+using Microsoft.AspNetCore.Mvc;
 
-public class ReservationController
+namespace APBD_CW06.Controllers;
+[ApiController]
+[Route("api/reservation")]
+public class ReservationController : ControllerBase
 {
     
 }
